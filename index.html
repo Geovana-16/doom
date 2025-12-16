@@ -3,29 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>DOOM no Navegador</title>
+
+  <!-- js-dos -->
+  <link rel="stylesheet" href="https://js-dos.com/6.22/current/js-dos.css">
   <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
       background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     #dos {
       width: 100%;
-      height: 100%;
+      max-width: 800px;
+      height: 600px;
     }
   </style>
 </head>
 <body>
-  <div id="dos"></div>
 
-  <script>
-    Dos(document.getElementById("dos"), {
-      url: "doom.jsdos",
-      kiosk: true
-    });
-  </script>
+<div id="dos"></div>
+
+<script>
+  Dos(document.getElementById("dos"), {
+    wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js"
+  }).run("https://js-dos.com/cdn/upload/DOOM-@evilution.zip");
+</script>
+
 </body>
 </html>
